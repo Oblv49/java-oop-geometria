@@ -17,7 +17,7 @@ public class Main {
         double baseRet;
         double heightRet;
 
-        //questo counter tiene trqaccia degli errori dell'utente
+        //questo counter tiene traccia degli errori dell'utente
         int counter = 0;
 
         //3 possibilità di errore
@@ -36,11 +36,14 @@ public class Main {
                 //chiamata metodi calcola area e perimetro
                 double area = rettangoloUser.calcolaArea();
                 double perimetro = rettangoloUser.calcolaPerimetro();
+
                 //output
                 System.out.println("Il rettangolo che hai inserito ha una base di " + baseRet + "cm " + " ed un altezza di " + heightRet + "cm.");
                 System.out.println("Il perimetro è di: " + perimetro + "cm.");
-                System.out.println("L'area è di: " + area + "cm.");
+                System.out.println("L'area è di: " + area + "cm2.");
+                rettangoloUser.draw('o');
                 break;
+
             } else {
                 System.out.println("Non hai inserito un rettangolo! Un rettangolo ha sempre base ed altezza diversi!");
                 counter++;
@@ -51,7 +54,7 @@ public class Main {
             }
         }
 
-
+        input.close();
 
     }
 }
